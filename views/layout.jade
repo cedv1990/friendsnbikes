@@ -39,5 +39,21 @@ html
           div.facebook
           div.instagram
     block content
+    footer
+      a(href='/') friendsnbikes.co
+      nav
+        if inicio
+          div.menuitem.selected(url='/') Inicio
+        else
+          div.menuitem(url='/') Inicio
+        if about
+          div.menuitem.selected(url='/about') Nosotros
+        else
+          div.menuitem(url='/about') Nosotros
+        if events
+          div.menuitem.selected(url='/events') Eventos
+        else
+          div.menuitem(url='/events') Eventos
+      span &copy; #{anio} FriendsNbikes
     script(type='text/javascript', src='/javascripts/index.js')
     block scripts

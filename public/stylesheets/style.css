@@ -84,7 +84,7 @@ header {
       font-weight: 500;
     }
 
-    .nav-bar .menu div.menuitem.selected {
+    div.menuitem.selected {
       text-shadow: 0px 0px 20px #fb9700;
       color: #ffcd81;
     }
@@ -182,6 +182,39 @@ header {
         background-image: url('/images/insta-hover.svg');
       }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15px;
+  border-top: 1px solid #e7ebf3;
+  background-color: rgba(30, 30, 30, .8);
+  margin: 0 50px;
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .8em;
+}
+
+footer > a {
+
+text-decoration: none;
+}
+
+footer > nav {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer > nav div.menuitem:not(:last-child) {
+  margin-right: 25px;
+}
+
 @media (max-width: 890px){
 
   .nav-bar .menu > nav {
@@ -261,6 +294,15 @@ header {
   .nav-bar .name {
     font-size: 1.5em;
   }
+
+  footer {
+    font-size: .7em;
+    height: 10px;
+  }
+
+  footer > nav div.menuitem:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 525px){
@@ -271,5 +313,9 @@ header {
 
   .nav-bar .network div:not(:last-child) {
       margin-right: 15px;
+  }
+
+  footer > nav {
+    display: none;
   }
 }
