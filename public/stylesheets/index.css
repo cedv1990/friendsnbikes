@@ -1,17 +1,24 @@
 section.container {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
 }
 
 .album{
     margin: 50px 0;
     margin-top: 10px;
+    width: 100%;
+}
+
+.album:not(:first-child){
+    border-top: dashed 1px #FFFFFF;
 }
 
     .album .name {
         margin: 25px 0;
+        font-size: 1.1em;
+        font-weight: 500;
     }
 
     .album .imgs {
