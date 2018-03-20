@@ -15,6 +15,10 @@ section.container {
     border: solid 1px #ffffff70;
     border-radius: 5px;
     box-shadow: 0px 0px 5px #ffffff;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .album:hover {
@@ -28,6 +32,10 @@ section.container {
         text-shadow: 0px 0px 20px #fff4e3;
         color: #fff4e3;
         text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 250px;
+        white-space: nowrap;
     }
 
     .album .imgs {
@@ -87,8 +95,34 @@ section.container {
         color: #fb9700;
     }
 
-@media (max-width: 890px){
-    .construccion {
-        font-size: 1.5em;
+@media (max-width: 920px){
+    .album{
+        margin: 15px;
+        padding: 15px;
+        cursor: pointer;
+        min-width: 250px;
+        min-height: 281px;
+        border: solid 1px #ffffff70;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #ffffff;
+    }
+
+    .album .imgs {
+        width: 250px;
+        height: 250px;
+    }
+
+    .album .imgs > div {
+        width: 125px;
+        height: 125px;
+    }
+
+    .album:hover .imgs {
+        width: 275px;
+        height: 275px;
+    }
+
+    .album .name {
+        font-size: .8em;
     }
 }
