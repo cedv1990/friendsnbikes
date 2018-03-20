@@ -185,6 +185,7 @@ header {
     bottom: 0;
     left: -200px;
     flex-flow: column nowrap;
+    align-items: center;
     justify-content: flex-start;
     padding: 30px;
     border-right: solid 1px #FFFFFF;
