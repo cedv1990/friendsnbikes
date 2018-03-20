@@ -1,17 +1,55 @@
-.construccion {
-    position: absolute;
+section.container {
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;
-    justify-content: center;
-    top: 80px;
-    bottom: 80px;
-    left: 0;
-    right: 0;
-    font-size: 2.5em;
-    font-style: italic;
-    text-shadow: 0px 0px 20px #b17e32;
-    color: rgba(255, 255, 255, 0.7);
+    justify-content: flex-start;
 }
+
+.album{margin: 30px 0;}
+
+    .album .name {
+        margin: 25px 0;
+    }
+
+    .album .imgs {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+        .album .imgs > div img {
+            max-height: 100px;
+        }
+
+        .album .imgs > div {
+            margin: 5px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+        }
+
+        .album .imgs > div:hover::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(111, 111, 111, .6);
+            background-image: url('/images/search.svg');
+            background-position: center;
+            background-size: 16px;
+            background-repeat: no-repeat;
+        }
+
+    .album .see {
+        font-size: .8em;
+        cursor: pointer;
+    }
+
+    .album .see:hover {
+        text-shadow: 0px 0px 20px #fb9700;
+        color: #fb9700;
+    }
 
 @media (max-width: 890px){
     .construccion {

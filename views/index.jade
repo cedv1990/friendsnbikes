@@ -4,6 +4,18 @@ block styles
   link(rel='stylesheet', href='/stylesheets/index.css')
 
 block scripts
+  script(type='text/javascript', src='/javascripts/albumes.js')
 
 block content
-  div.construccion Próximamente...
+  input#__data(type='hidden',value=albumsString)
+  - for(var i = 0; i < albums.length; i++) {
+  - var album = albums[i];
+    section.album
+      div.name #{album.show}
+      div(class='imgs imgs-#{i}')
+        each img in album.pages[0].imgs
+          div
+            img(src='/images/albums/#{album.name}/#{img}')
+      if album.pages.length > 1
+        div.see(index=0,albumIndex=i) Cargar más...
+  - }
