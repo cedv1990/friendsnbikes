@@ -14,5 +14,5 @@ FNB.require([], () => {
     IG.addEvent('click', () => window.open('https://www.instagram.com/friendsnbikes'));
     menu.addEvent('click', () => nav.classList.toggle('visible'));
 
-    itemsMenu.forEach((item) => item.addEvent('click', () => window.location.href = item.attribute('url')));
+    itemsMenu.forEach(item => item.addEvent('click', () => window.location.href = item.attribute('url')));
 });

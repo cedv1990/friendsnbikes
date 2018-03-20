@@ -10,8 +10,8 @@ block content
   input#__data(type='hidden',value=albumsString)
   - for(var i = 0; i < albums.length; i++) {
   - var album = albums[i];
-    section.album
-      div(class='imgs imgs-#{i}')
+    section.album(num=i)
+      div.imgs
         - for(var j = 0; j < 4 && j < album.imgs.length; j++) {
           div
             img(src='/images/albums/#{album.name}/#{album.imgs[j]}')

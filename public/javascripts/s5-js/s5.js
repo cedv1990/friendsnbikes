@@ -671,7 +671,12 @@
         fn = fn.toString();
 
         fn = fn.replace(/\/\*[^(?:\*\/)]+\*\//g, '');
-        fn = fn.match(/function \(([^\)]*)\)/)[1];
+        if (fn.indexOf('function') >= 0){
+            fn = fn.match(/function \(([^\)]*)\)/)[1];
+        }
+        else{
+            fn = fn.match(/\(([^\)]*)\)(.|)+(=>)+/)[1];
+        }
 
         return fn ? fn.split(',').map((dependency) => dependency.trim()) : [];
     };
