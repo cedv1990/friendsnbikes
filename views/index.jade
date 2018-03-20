@@ -11,11 +11,10 @@ block content
   - for(var i = 0; i < albums.length; i++) {
   - var album = albums[i];
     section.album
-      div.name #{album.show}
       div(class='imgs imgs-#{i}')
-        each img in album.pages[0].imgs
+        - for(var j = 0; j < 4 && j < album.imgs.length; j++) {
           div
-            img(src='/images/albums/#{album.name}/#{img}')
-      if album.pages.length > 1
-        span.see(index=0,albumIndex=i) Cargar más...
+            img(src='/images/albums/#{album.name}/#{album.imgs[j]}')
+        - }
+      div.name #{album.show}
   - }

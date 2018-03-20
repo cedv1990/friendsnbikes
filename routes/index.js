@@ -15,26 +15,8 @@ router.get('/', function(req, res, next) {
         var album = {
           name: file,
           show: file.replace(/_/g, '/'),
-          pages: []
+          imgs: leer(d + '/' + file, [])
         };
-        var imgs = leer(d + '/' + file, []);
-
-
-        let actual = '';
-        let n = 0;
-        for(let i = 1; i <= imgs.length; i++) {
-          if (i == 1){
-            actual = i + '-15';
-            n++;
-            album.pages.push({interval: actual, imgs: []});
-          }
-          else if (i % 15 == 0){
-            actual = (i + 1) + '-' + (i + (imgs.length - i < 15 ? imgs.length - i : 15));
-            n++;
-            album.pages.push({interval: actual, imgs: []});
-          }
-          album.pages[n - 1].imgs.push(imgs[i - 1]);
-        }
         albums.push(album);
       }
       else{
