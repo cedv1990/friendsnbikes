@@ -288,6 +288,10 @@ footer > nav div.menuitem:not(:last-child) {
   .nav-bar .network {
     order: 3;
   }
+
+  footer {
+    margin: 0 25px;
+  }
 }
 
 @media (max-width: 600px){
