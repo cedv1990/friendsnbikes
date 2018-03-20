@@ -1,0 +1,74 @@
+{
+  "_from": "s5-js",
+  "_id": "s5-js@1.0.15",
+  "_inBundle": false,
+  "_integrity": "sha512-vjE11Q0i0P003DdjiSuhB2xdqGoeA4EgSryLq+soE4iNjCTJOPR4eGJgYTNI5jZhbZvV5xRHxoDsfim0Y2tYxQ==",
+  "_location": "/s5-js",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "s5-js",
+    "name": "s5-js",
+    "escapedName": "s5-js",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/s5-js/-/s5-js-1.0.15.tgz",
+  "_shasum": "d9113c89327f22ce5cb43e1466f4cb6c626bbbf3",
+  "_spec": "s5-js",
+  "_where": "/Users/carlosdiazvalbuena/Documents/GitHub/friendsnbikes",
+  "author": {
+    "name": "SincoSoft-GoldenBerry"
+  },
+  "bugs": {
+    "url": "https://github.com/SincoSoft-GoldenBerry/S5/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "¡El mejor framework Javascript, basado en Vanilla Js!",
+  "files": [
+    "aes.js",
+    "s5.autocomplete.js",
+    "s5.dragdrop.js",
+    "s5.icons.js",
+    "s5.indicator.js",
+    "s5.js",
+    "s5.notifications.js",
+    "s5.progress.circular.js",
+    "s5.switch.js",
+    "s5.tour.js"
+  ],
+  "homepage": "http://sincoerp.com/S5/",
+  "keywords": [
+    "JavaScript",
+    "JS",
+    "VanilaJS",
+    "s5",
+    "autocomplete",
+    "icons",
+    "switch",
+    "components",
+    "web",
+    "client",
+    "Sinco",
+    "SincoSoft"
+  ],
+  "license": "ISC",
+  "main": "s5.js",
+  "name": "s5-js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SincoSoft-GoldenBerry/S5.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.15"
+}

@@ -6,8 +6,13 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
     meta(http-equiv='Pragma', content='no-cache')
     meta(http-equiv='expires', content='0')
+    link(rel='shortcut icon', href='/images/favicon.ico')
+    link(rel='apple-touch-icon', href='/images/logo_16x16.png')
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='/javascripts/s5-js/s5.js')
+    script(type='text/javascript', src='/javascripts/s5-js/s5.icons.js')
+
   body
     header
       nav.nav-bar
@@ -22,3 +27,4 @@ html
           div.facebook
           div.instagram
     block content
+    block scripts

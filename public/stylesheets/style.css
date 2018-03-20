@@ -21,11 +21,15 @@ body {
   font-size: 18px;
   padding-top: 10px;
   padding: 0;
+  background-image: url(/images/backgrounds/radical.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 body::after {
   content: "";
-  background-image: url('/images/logo.png');
+  /* background-image: url('/images/logo.png'); */
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 30%;
@@ -49,6 +53,11 @@ body::after {
 header {
   height: 80px;
   padding: 15px 50px;
+  /* background-image: url('/images/backgrounds/radical.png'); */
+  /* background-repeat: no-repeat; */
+  /* background-size: 100%; */
+  /* background-position-x: center; */
+  /* background-position-y: -126px; */
 }
 
 .nav-bar {
@@ -58,7 +67,7 @@ header {
   justify-content: space-between;
   height: 100%;
   border-bottom: solid 1px #FFFFFF;
-  padding-bottom: 10px;
+  padding-bottom: 14px;
 }
 
   .nav-bar .menu {
@@ -147,6 +156,11 @@ header {
 
 @media (max-width: 890px){
 
+  header {
+    height: 40px;
+    padding: 15px 25px;
+  }
+
   body::after{
     background-size: 50%;
     background-position: bottom right;
@@ -158,12 +172,13 @@ header {
 
   .nav-bar .menu {
     order: 1;
-    height: 50px;
-    width: 100%;
+    min-width: 40px;
+    height: 40px;
+    width: 40px;
     background-image: url('/images/menu.svg');
     background-repeat: no-repeat;
-    background-position: center left;
-    background-size: 40px;
+    background-position: center;
+    background-size: 35px;
     display: inline-block;
     z-index: 1;
     cursor: pointer;
@@ -191,21 +206,6 @@ header {
 }
 
 @media (max-width: 600px){
-  header {
-    height: 40px;
-    padding: 15px 25px;
-  }
-
-  .nav-bar .menu {
-    order: 1;
-    min-width: 40px;
-    height: 40px;
-    width: 40px;
-    background-position: center;
-    background-size: 35px;
-    background-repeat: no-repeat;
-  }
-
   .nav-bar .name {
     font-size: 1.5em;
   }
