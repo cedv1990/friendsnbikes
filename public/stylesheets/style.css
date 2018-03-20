@@ -186,9 +186,11 @@ header {
 section.container {
   position: absolute;
   top: 110px;
-  left: 50px;
-  right: 50px;
-  margin-bottom: 40px;
+  left: 0;
+  right: 0;
+  bottom: 36px;
+  overflow: auto;
+  padding: 0 50px;
 }
 
 footer {
@@ -228,8 +230,10 @@ footer > nav div.menuitem:not(:last-child) {
 
   section.container {
     top: 70px;
-    left: 25px;
-    right: 25px;
+    left: 0;
+    right: 0;
+    bottom: 36px;
+    padding: 0 25px;
   }
 
   .nav-bar .menu > nav {
