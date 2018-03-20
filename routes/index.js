@@ -6,18 +6,18 @@ var anio = new Date().getFullYear();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   const albums = [];
-  const dir = __dirname.replace(/routes/, '') + 'public\\images\\albums';
+  const dir = __dirname.replace(/routes/, '') + 'public/images/albums';
 
   const leer = (d, ar) => {
     const fs = require('fs');
     fs.readdirSync(d).forEach(file => {
-      if ( fs.statSync(d + '\\' + file).isDirectory() ) {
+      if ( fs.statSync(d + '/' + file).isDirectory() ) {
         var album = {
           name: file,
           show: file.replace(/_/g, '/'),
           pages: []
         };
-        var imgs = leer(d + '\\' + file, []);
+        var imgs = leer(d + '/' + file, []);
 
 
         let actual = '';
