@@ -1,13 +1,11 @@
 section.container {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
-    padding-bottom: 20px;
 }
 
 .album{
-    margin: 15px;
     padding: 15px;
     cursor: pointer;
     min-width: 350px;
@@ -16,7 +14,7 @@ section.container {
     border-radius: 5px;
     box-shadow: 0px 0px 5px #ffffff;
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
@@ -29,13 +27,13 @@ section.container {
         margin-top: 10px;
         font-size: 1.1em;
         font-weight: 500;
-        text-shadow: 0px 0px 20px #fff4e3;
+        text-shadow: 0px 0px 10px #fff4e3;
         color: #fff4e3;
         text-align: center;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 250px;
         white-space: nowrap;
+        max-width: 100%;
     }
 
     .album .imgs {
@@ -101,6 +99,7 @@ section.container {
         padding: 15px;
         cursor: pointer;
         min-width: 250px;
+        max-width: 250px;
         min-height: 281px;
         border: solid 1px #ffffff70;
         border-radius: 5px;
