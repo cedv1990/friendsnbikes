@@ -23,11 +23,21 @@ html
         section.menu
           div.icono
           nav
-            div.menuitem Inicio
-            div.menuitem Nosotros
-            div.menuitem Eventos
+            if inicio
+              div.menuitem.selected(url='/') Inicio
+            else
+              div.menuitem(url='/') Inicio
+            if about
+              div.menuitem.selected(url='/about') Nosotros
+            else
+              div.menuitem(url='/about') Nosotros
+            if events
+              div.menuitem.selected(url='/events') Eventos
+            else
+              div.menuitem(url='/events') Eventos
         section.network
           div.facebook
           div.instagram
     block content
+    script(type='text/javascript', src='/javascripts/index.js')
     block scripts
