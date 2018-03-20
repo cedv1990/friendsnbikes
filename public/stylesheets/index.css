@@ -17,6 +17,7 @@ section.container {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    background-color: rgba(30, 30, 30, .5);
 }
 
 .album:hover {
