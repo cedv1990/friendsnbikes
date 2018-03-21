@@ -7,7 +7,7 @@ var anio = new Date().getFullYear();
 router.get('/', function(req, res, next) {
   const albums = [];
   const dir = __dirname.replace(/routes/, '') + 'public/images/albums';
-  const _url = req.protocol + '://' + req.headers.host;
+  const _url = req.protocol + (req.secure ? 's' : '') + '://' + req.headers.host;
 
   const leer = (d, ar) => {
     const fs = require('fs');
