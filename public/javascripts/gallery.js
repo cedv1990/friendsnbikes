@@ -2,7 +2,7 @@ album.define('gallery', () => {
 
     let indexAlbum;
     let data;
-    let index = 0;
+    let index;
 
     const description = () => 'Foto {0} de {1}'.format(index + 1, data[indexAlbum].imgs.length);
 
@@ -69,6 +69,7 @@ album.define('gallery', () => {
     };
 
     const _init = i => {
+        index = 0;
         indexAlbum = i;
         createLayout(data[indexAlbum].show);
         next();
