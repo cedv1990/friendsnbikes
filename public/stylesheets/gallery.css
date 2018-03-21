@@ -30,6 +30,7 @@
             top: 20px;
             right: 20px;
             cursor: pointer;
+            height: 50px;
         }
 
             .gallery-container .gallery-title .gallery-close svg {
@@ -38,6 +39,11 @@
 
             .gallery-container .gallery-title .gallery-close:hover svg {
                 transform: rotate(225deg);
+            }
+
+            .gallery-container .gallery-title .gallery-close:hover svg path,
+            .gallery-container > aside:hover svg polygon {
+                fill: #fb9700 !important;
             }
 
     .gallery-container .gallery-photo{
@@ -135,6 +141,7 @@
     .gallery-container .gallery-title .gallery-close {
         top: 20px;
         right: 10px;
+        height: 30px;
     }
 
     .gallery-container .gallery-title .gallery-close svg {
