@@ -7,6 +7,7 @@ var anio = new Date().getFullYear();
 router.get('/', function(req, res, next) {
   const albums = [];
   const dir = __dirname.replace(/routes/, '') + 'public/images/albums';
+  const _url = req.protocol + '://' + req.headers.host;
 
   const leer = (d, ar) => {
     const fs = require('fs');
@@ -30,7 +31,7 @@ router.get('/', function(req, res, next) {
 
   console.log(albums);
 
-  res.render('index', { title: '@FriendsNbikes - FnB', inicio: true, about: false, events: false, anio: anio, albums: albums, albumsString: JSON.stringify(albums) });
+  res.render('index', { title: '@FriendsNbikes - FnB', inicio: true, about: false, events: false, anio: anio, albums: albums, albumsString: JSON.stringify(albums), domain: _url });
 });
 
 router.get('/about', function(req, res, next) {
