@@ -112,6 +112,7 @@ header {
     flex-flow: row nowrap;
     justify-content: space-around;
     flex: 1;
+    font-size: 1.2em;
   }
 
   .nav-bar .menu .icono {
@@ -206,6 +207,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   font-size: .8em;
+  letter-spacing: 1px;
 }
 
 footer > a {
