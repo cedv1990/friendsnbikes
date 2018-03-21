@@ -151,5 +151,12 @@
 
     .gallery-container > aside {
         top: 70px;
+        width: 30px;
+    }
+
+    .gallery-container .gallery-photo {
+        padding: 10px;
+        left: 30px;
+        right: 30px;
     }
 }
