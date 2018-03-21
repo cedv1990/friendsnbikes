@@ -7,6 +7,8 @@ var anio = new Date().getFullYear();
 router.get('/', function(req, res, next) {
   const albums = [];
   const dir = __dirname.replace(/routes/, '') + 'public/images/albums';
+  const description = '@FriendsNbikes - Amigos, risas, motos y adrenalina.';
+
   const _url = req.protocol + (req.secure ? 's' : '') + '://' + req.headers.host;
 
   const leer = (d, ar) => {
@@ -29,17 +31,15 @@ router.get('/', function(req, res, next) {
 
   leer(dir, null);
 
-  console.log(albums);
-
-  res.render('index', { title: '@FriendsNbikes - FnB', inicio: true, about: false, events: false, anio: anio, albums: albums, albumsString: JSON.stringify(albums), domain: _url });
+  res.render('index', { title: '@FriendsNbikes - FnB', inicio: true, about: false, events: false, anio: anio, albums: albums, albumsString: JSON.stringify(albums), domain: _url, description: description });
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'Nosotros - @FriendsNbikes', inicio: false, about: true, events: false, anio: anio });
+  res.render('about', { title: 'Nosotros - @FriendsNbikes', inicio: false, about: true, events: false, anio: anio, domain: _url, description: description });
 });
 
 router.get('/events', function(req, res, next) {
-  res.render('events', { title: 'Eventos - @FriendsNbikes', inicio: false, about: false, events: true, anio: anio });
+  res.render('events', { title: 'Eventos - @FriendsNbikes', inicio: false, about: false, events: true, anio: anio, domain: _url, description: description });
 });
 
 module.exports = router;
