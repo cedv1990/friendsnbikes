@@ -1,11 +1,15 @@
 album.define('gallery', () => {
 
+    let indexAlbum;
     let data;
     let index = 0;
+
+    const description = () => 'Foto {0} de {1}'.format(index + 1, data[indexAlbum].imgs.length);
 
     const _setData = d => data = d;
     let photoView;
     let container;
+    let foot;
 
     const destroy = () => {
         container.delete();
@@ -19,6 +23,23 @@ album.define('gallery', () => {
             document.createTextNode(title),
             s5.createElem('aside', { 'class': 'gallery-close' }).insert(s5.iconos.Plus(50, '#FFFFFF')).addEvent('click', destroy)
         ]);
+        foot = s5.createElem('div', { 'class': 'gallery-desc' });
+
+        right.addEvent('click', () => { 
+            index++;
+            next();
+            left.classList.remove('hidden');
+            if (index + 1 == data[indexAlbum].imgs.length)
+                right.classList.add('hidden');
+        });
+
+        left.addEvent('click', () => { 
+            index--;
+            next();
+            right.classList.remove('hidden');
+            if (index == 0)
+                left.classList.add('hidden');
+        });
 
         photoView = s5.createElem('section', { 'class': 'gallery-photo' });
 
@@ -26,18 +47,31 @@ album.define('gallery', () => {
             titleCont,
             left,
             photoView,
-            right
+            right,
+            foot
         ]);
         document.body.appendChild(container);
     };
 
-    const next = album => {
-        photoView.insert(s5.createElem('img', { 'src': '/images/albums/{0}/{1}'.format(album.name, album.imgs[index]) }));
+    const next = () => {
+        const album = data[indexAlbum];
+        photoView.innerHTML = '';
+        foot.innerHTML = '';
+
+        const url = '/images/albums/{0}/{1}'.format(album.name, album.imgs[index]);
+
+        photoView.insert(s5.createElem('img', { 'src': url }));
+        if (s5.get('__style')) s5.get('__style').delete();
+        const style = s5.createElem('style', { 'id': '__style' });
+        style.innerHTML = '.gallery-container .gallery-photo::before { background-image: url("{0}") }'.format(url);
+        document.head.appendChild(style);
+        foot.insert(document.createTextNode(description()));
     };
 
     const _init = i => {
-        createLayout(data[i].show);
-        next(data[i]);
+        indexAlbum = i;
+        createLayout(data[indexAlbum].show);
+        next();
     }
 
     return {
