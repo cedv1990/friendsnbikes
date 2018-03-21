@@ -12,5 +12,7 @@ album.require(['gallery'], gallery => {
     const albums = s5.get('.album');
     albums.forEach(album => {
         album.addEvent('click', () => gallery.init(parseInt( album.attribute('num') )));
+        if (isMobile)
+            album.classList.add('mobile');
     });
 });

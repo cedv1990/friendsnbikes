@@ -22,7 +22,7 @@ section.container {
     background-color: rgba(30, 30, 30, .5);
 }
 
-.album:hover {
+.album:not(.mobile):hover {
     box-shadow: 0px 0px 25px #ffffff;
 }
 
@@ -63,16 +63,16 @@ section.container {
             overflow: hidden;
         }
 
-        .album:hover .imgs {
+        .album:not(.mobile):hover .imgs {
             width: 375px;
             height: 375px;
         }
 
-        .album:hover .imgs > div {
+        .album:not(.mobile):hover .imgs > div {
             margin: 5px;
         }
 
-        .album:hover .imgs::after {
+        .album:not(.mobile):hover .imgs::after {
             content: '';
             position: absolute;
             top: 0;
@@ -118,7 +118,7 @@ section.container {
         height: 125px;
     }
 
-    .album:hover .imgs {
+    .album:not(.mobile):hover .imgs {
         width: 275px;
         height: 275px;
     }
