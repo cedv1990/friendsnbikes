@@ -122,10 +122,6 @@ header {
     min-width: 40px;
     height: 40px;
     width: 40px;
-    background-image: url('/images/menu.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 35px;
     cursor: pointer;
   }
 
@@ -176,24 +172,12 @@ header {
 
       .nav-bar .network div:hover {
         box-shadow: 0px 0px 20px #fb9700;
-        color: #fb9700;
       }
 
-    .facebook {
-      background-image: url('/images/fb.svg');
-    }
-
-      .facebook:hover {
-        background-image: url('/images/fb-hover.svg');
-      }
-
-    .instagram {
-      background-image: url('/images/insta.svg');
-    }
-
-      .instagram:hover {
-        background-image: url('/images/insta-hover.svg');
-      }
+        .nav-bar .network div:hover svg path,
+        .nav-bar .network div:hover svg circle {
+          fill: #fb9700 !important;
+        }
 
 section.container {
   position: absolute;
@@ -307,7 +291,9 @@ footer > nav div.menuitem:not(:last-child) {
   }
 
   .nav-bar .menu .icono {
-    display: inherit !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav-bar .menu div.menuitem:first-child {
@@ -341,8 +327,8 @@ footer > nav div.menuitem:not(:last-child) {
     z-index: 1;
   }
 
-    .nav-bar .menu .icono:hover {
-      background-image: url('/images/menu-hover.svg');
+    .nav-bar .menu .icono:hover path {
+      fill: #fb9700 !important;
     }
 
     .nav-bar .menu > div {
