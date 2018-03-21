@@ -228,6 +228,15 @@ footer > nav {
   justify-content: space-between;
 }
 
+footer > nav div {
+  cursor: pointer;
+}
+
+footer > nav div:hover {
+  text-shadow: 0px 0px 20px #fb9700 !important;
+  color: #fb9700 !important;
+}
+
 footer > nav div.menuitem:not(:last-child) {
   margin-right: 25px;
 }
