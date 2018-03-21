@@ -37,6 +37,7 @@ section.container {
         text-overflow: ellipsis;
         white-space: nowrap;
         max-width: 100%;
+        padding: 0 5px;
     }
 
     .album .imgs {
