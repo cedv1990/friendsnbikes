@@ -31,6 +31,9 @@
             right: 20px;
             cursor: pointer;
             height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
             .gallery-container .gallery-title .gallery-close svg {

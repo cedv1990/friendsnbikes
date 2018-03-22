@@ -11,19 +11,30 @@ router.get('/', function(req, res, next) {
 
   const _url = req.protocol + (req.secure ? 's' : '') + '://' + req.headers.host;
 
+  const extensions = ['BMP', 'GIF', 'JPG', 'JPEG', 'TIF', 'PNG'];
+
   const leer = (d, ar) => {
     const fs = require('fs');
+
     fs.readdirSync(d).forEach(file => {
       if ( fs.statSync(d + '/' + file).isDirectory() ) {
+        const configuration = JSON.parse(fs.readFileSync(d + '/' + file + '/config.json', 'utf8'));
+
         var album = {
-          name: file,
-          show: file.replace(/_/g, '/'),
+          name: configuration.name,
+          description: configuration.description,
+          coverImgs: configuration.cover,
+          folder: '/images/albums/' + file,
           imgs: leer(d + '/' + file, [])
         };
         albums.push(album);
       }
       else{
-        ar.push(file);
+        if (extensions.indexOf( file.toUpperCase().split('.').pop() ) >= 0
+          &&
+          !file.toLowerCase().startsWith('min-')
+        )
+          ar.push(file);
       }
     });
     return ar;

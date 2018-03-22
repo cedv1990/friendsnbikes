@@ -12,9 +12,8 @@ block content
   - var album = albums[i];
     section.album(num=i)
       div.imgs
-        - for(var j = 0; j < 4 && j < album.imgs.length; j++) {
+        each cover in album.coverImgs
           div
-            img(src='/images/albums/#{album.name}/#{album.imgs[j]}')
-        - }
-      div.name #{album.show}
+            img(src=album.folder + '/' + cover)
+      div.name= album.name
   - }

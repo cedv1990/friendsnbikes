@@ -58,7 +58,7 @@ album.define('gallery', () => {
         photoView.innerHTML = '';
         foot.innerHTML = '';
 
-        const url = '/images/albums/{0}/{1}'.format(album.name, album.imgs[index]);
+        const url = '{0}/{1}'.format(album.folder, album.imgs[index]);
 
         photoView.insert(s5.createElem('img', { 'src': url }));
         if (s5.get('__style')) s5.get('__style').delete();
@@ -71,7 +71,7 @@ album.define('gallery', () => {
     const _init = i => {
         index = 0;
         indexAlbum = i;
-        createLayout(data[indexAlbum].show);
+        createLayout(data[indexAlbum].name);
         next();
     }
 

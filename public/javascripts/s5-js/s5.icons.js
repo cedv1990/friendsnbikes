@@ -1826,7 +1826,7 @@
             _svg.attr('width', dim);
             _svg.attr('height', dim);
 
-            _svg.attr('viewBox', '0 0 24 24');
+            _svg.attr('viewBox', '0 0 23 23');
 
             var _path = ce('path');
 
