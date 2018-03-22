@@ -280,6 +280,23 @@
     animation: bobble-l-d .4s infinite ease-in-out;
 }
 
+.profile.baez .head {
+    top: 12px;
+    left: 61px;
+    height: 125px;
+    width: 125px;
+    background-image: url('/images/profiles/head-baez.png');
+}
+
+.profile.baez .picture {
+    background-image: url('/images/profiles/baez.png');
+}
+
+.profile.baez:hover .head,
+.profile.baez.selected .head {
+    animation: bobble-r-d .4s infinite ease-in-out;
+}
+
 @media (max-width: 890px) {
     .construccion {
         font-size: 1.5em;
