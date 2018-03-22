@@ -15,4 +15,12 @@ FNB.require([], () => {
     menu.addEvent('click', () => nav.classList.toggle('visible'));
 
     itemsMenu.forEach(item => item.addEvent('click', () => window.location.href = item.attribute('url')));
+
+    let pos = 0;
+    const back = ['superduke', 'radical'];
+    setInterval(()=>{
+        document.body.style.backgroundImage = 'url("/images/backgrounds/{0}.png")'.format(back[pos]);
+        pos++;
+        if (pos > 1) pos = 0;
+    }, 10000);
 });
