@@ -1,15 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-var anio = new Date().getFullYear();
+const anio = new Date().getFullYear();
+
+const description = '@FriendsNbikes - Amigos, risas, motos y adrenalina.';
+
+const _url = (req) => req.protocol + (req.secure ? 's' : '') + '://' + req.headers.host;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   const albums = [];
   const dir = __dirname.replace(/routes/, '') + 'public/images/albums';
-  const description = '@FriendsNbikes - Amigos, risas, motos y adrenalina.';
-
-  const _url = req.protocol + (req.secure ? 's' : '') + '://' + req.headers.host;
 
   const extensions = ['BMP', 'GIF', 'JPG', 'JPEG', 'TIF', 'PNG'];
 
@@ -42,15 +43,15 @@ router.get('/', function(req, res, next) {
 
   leer(dir, null);
 
-  res.render('index', { title: '@FriendsNbikes - FnB', inicio: true, about: false, events: false, anio: anio, albums: albums, albumsString: JSON.stringify(albums), domain: _url, description: description });
+  res.render('index', { title: '@FriendsNbikes - FnB', inicio: true, about: false, events: false, anio: anio, albums: albums, albumsString: JSON.stringify(albums), domain: _url(req), description: description });
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'Nosotros - @FriendsNbikes', inicio: false, about: true, events: false, anio: anio, domain: _url, description: description });
+  res.render('about', { title: 'Nosotros - @FriendsNbikes', inicio: false, about: true, events: false, anio: anio, domain: _url(req), description: description });
 });
 
 router.get('/events', function(req, res, next) {
-  res.render('events', { title: 'Eventos - @FriendsNbikes', inicio: false, about: false, events: true, anio: anio, domain: _url, description: description });
+  res.render('events', { title: 'Eventos - @FriendsNbikes', inicio: false, about: false, events: true, anio: anio, domain: _url(req), description: description });
 });
 
 module.exports = router;
