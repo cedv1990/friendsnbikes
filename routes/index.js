@@ -43,7 +43,7 @@ router.get('/', function(req, res, next) {
 
   leer(dir, null);
 
-  res.render('index', { title: '@FriendsNbikes - FnB', inicio: true, about: false, events: false, anio: anio, albums: albums, albumsString: JSON.stringify(albums), domain: _url(req), description: description });
+  res.render('index', { title: '@FriendsNbikes - FnB', inicio: true, about: false, events: false, anio: anio, albums: albums, albumsString: JSON.stringify(albums.reverse()), domain: _url(req), description: description });
 });
 
 router.get('/about', function(req, res, next) {
