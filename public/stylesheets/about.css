@@ -204,6 +204,23 @@
     animation: bobble-r-d .4s infinite ease-in-out;
 }
 
+.profile.guerrero .head {
+    top: 10px;
+    right: 71px;
+    height: 60px;
+    width: 60px;
+    background-image: url('/images/profiles/head-guerrero.png');
+}
+
+.profile.guerrero .picture {
+    background-image: url('/images/profiles/guerrero.png');
+}
+
+.profile.guerrero:hover .head,
+.profile.guerrero.selected .head {
+    animation: bobble-l-d .4s infinite ease-in-out;
+}
+
 @media (max-width: 890px) {
     .construccion {
         font-size: 1.5em;
