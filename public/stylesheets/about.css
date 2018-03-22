@@ -246,6 +246,40 @@
     animation: bobble-r-d .4s infinite ease-in-out;
 }
 
+.profile.fonsi .head {
+    top: 4px;
+    right: 48px;
+    height: 61px;
+    width: 61px;
+    background-image: url('/images/profiles/head-fonsi.png');
+}
+
+.profile.fonsi .picture {
+    background-image: url('/images/profiles/fonsi.png');
+}
+
+.profile.fonsi:hover .head,
+.profile.fonsi.selected .head {
+    animation: bobble-l-d .4s infinite ease-in-out;
+}
+
+.profile.garces .head {
+    top: 0;
+    right: 80px;
+    height: 70px;
+    width: 70px;
+    background-image: url('/images/profiles/head-garces.png');
+}
+
+.profile.garces .picture {
+    background-image: url('/images/profiles/garces.png');
+}
+
+.profile.garces:hover .head,
+.profile.garces.selected .head {
+    animation: bobble-l-d .4s infinite ease-in-out;
+}
+
 @media (max-width: 890px) {
     .construccion {
         font-size: 1.5em;
