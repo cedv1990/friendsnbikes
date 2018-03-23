@@ -1,0 +1,68 @@
+[
+    {
+        "name": "baez",
+        "order": 9,
+        "description": "Leonardo Báez (Leo) - MT03",
+        "instagram": "@leonardobg.19"
+    },
+    {
+        "name": "diaz",
+        "order": 1,
+        "description": "Carlos Díaz (Carlitos) - GSXR600",
+        "instagram": "@carlosgsxr600"
+    },
+    {
+        "name": "fonsi",
+        "order": 7,
+        "description": "Álvaro Ruíz (Fonsi) - Z250",
+        "instagram": "@fonsi1193"
+    },
+    {
+        "name": "garces",
+        "order": 8,
+        "description": "Cristhian Garcés (Garci) - MT09",
+        "instagram": "@cristhiangarces"
+    },
+    {
+        "name": "guerrero",
+        "order": 5,
+        "description": "Carlos Guerrero (Árabe-Gurrero) - Ninja 300",
+        "instagram": "@carlos.guerrero823"
+    },
+    {
+        "name": "luque",
+        "order": 11,
+        "description": "Cristhian Luque (Cris) - --",
+        "instagram": "@crissluquer"
+    },
+    {
+        "name": "orjuela",
+        "order": 2,
+        "description": "Felipe Orjuela (Pipe) - R15",
+        "instagram": "@felipenk9"
+    },
+    {
+        "name": "perez",
+        "order": 4,
+        "description": "Julián Pérez (Juli) - ZX6R",
+        "instagram": "@jjulianprin"
+    },
+    {
+        "name": "poveda",
+        "order": 10,
+        "description": "Sneider Poveda (Tiësto) - GSXS750",
+        "instagram": "@sneider_poveda"
+    },
+    {
+        "name": "santana",
+        "order": 6,
+        "description": "Fabián Santana (Fabi) - Z250",
+        "instagram": "@fabian__santana"
+    },
+    {
+        "name": "zamora",
+        "order": 3,
+        "description": "Felipe Zamora (Zamorita) - R6/R15",
+        "instagram": "@felipezamorac"
+    }
+]

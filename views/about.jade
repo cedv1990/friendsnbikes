@@ -8,36 +8,9 @@ block scripts
 
 block content
   section.profiles
-    div.profile.diaz
-      div.head
-      div.picture
-    div.profile.orjuela
-      div.head
-      div.picture
-    div.profile.zamora
-      div.head
-      div.picture
-    div.profile.perez
-      div.head
-      div.picture
-    div.profile.guerrero
-      div.head
-      div.picture
-    div.profile.santana
-      div.head
-      div.picture
-    div.profile.fonsi
-      div.head
-      div.picture
-    div.profile.garces
-      div.head
-      div.picture
-    div.profile.baez
-      div.head
-      div.picture
-    div.profile.poveda
-      div.head
-      div.picture
-    div.profile.luque
-      div.head
-      div.picture
+    each profile in profiles
+      div(class='profile ' + profile.name)
+        div.head
+        div.picture
+        section.name= profile.description
+          section.instagram(url=profile.instagram)= profile.instagram

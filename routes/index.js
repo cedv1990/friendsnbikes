@@ -47,7 +47,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'Nosotros - @FriendsNbikes', inicio: false, about: true, events: false, anio: anio, domain: _url(req), description: description });
+  const fs = require('fs');
+  const dir = __dirname.replace(/routes/, '') + 'profiles.json';
+
+  const profiles = JSON.parse(fs.readFileSync(dir, 'utf8')).sort((a, b) => a.order - b.order);
+
+  res.render('about', { title: 'Nosotros - @FriendsNbikes', inicio: false, about: true, events: false, anio: anio, domain: _url(req), description: description, profiles: profiles });
 });
 
 router.get('/events', function(req, res, next) {

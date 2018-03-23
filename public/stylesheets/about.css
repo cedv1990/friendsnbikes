@@ -96,13 +96,14 @@
 }
 
 .profile {
-    height: 250px;
+    min-height: 310px;
     width: 250px;
     cursor: pointer;
     position: relative;
     border-radius: 50%;
-    box-shadow: 0px 0px 20px #ffffff;
-    margin: 20px;
+    margin: 25px;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
     .profile .head {
@@ -114,35 +115,76 @@
     }
 
     .profile .picture {
-        position: absolute;
-        left: 0;
-        right: 0;
+        position: relative;
         top: 0;
-        bottom: 0;
+        height: 250px;
+        width: 250px;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         background-color: rgba(255, 255, 255, .7);
         border-radius: 50%;
+        box-shadow: 0px 0px 20px #ffffff;
     }
 
-.profile:hover {
+.profile:not(.mobile):hover .picture {
     box-shadow: 0px 0px 40px #ffffff;
 }
 
-.profile.selected {
-    box-shadow: 0px 0px 50px #ffd18a;
+.profile.selected .picture {
+    box-shadow: 0px 0px 50px #ffd18a !important;
 }
 
 .profile.selected .picture {
     background-color: rgba(255, 209, 138, .7);
 }
 
-.profile:hover .head,
+.profile:not(.mobile):hover .head,
 .profile.selected .head {
     -ms-transform-origin: bottom center;
     transform-origin: bottom center;
 }
+
+.profile .name {
+    text-align: center;
+    max-width: 95%;
+    margin-top: 15px;
+}
+
+.profile .name,
+.profile .instagram {
+    letter-spacing: 1px;
+    opacity: 0;
+}
+
+.profile .name {
+    font-size: 1.1em;
+}
+
+.profile .instagram {
+    font-size: .9em;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-shadow: 0px 0px 15px #fb9700;
+    color: #ffcd81;
+}
+
+.profile .instagram svg {
+    margin-right: 5px;
+}
+
+    .profile:not(.mobile):hover .name,
+    .profile.selected .name {
+        opacity: 1;
+    }
+
+    .profile:not(.mobile):hover .instagram,
+    .profile.selected .instagram {
+        opacity: 1;
+    }
 
 .profile.diaz .head {
     top: 10px;
@@ -156,7 +198,7 @@
     background-image: url('/images/profiles/diaz.png');
 }
 
-.profile.diaz:hover .head,
+.profile:not(.mobile).diaz:hover .head,
 .profile.diaz.selected .head {
     animation: bobble-l-d .4s infinite ease-in-out;
 }
@@ -173,7 +215,7 @@
     background-image: url('/images/profiles/orjuela.png');
 }
 
-.profile.orjuela:hover .head,
+.profile:not(.mobile).orjuela:hover .head,
 .profile.orjuela.selected .head {
     animation: bobble-r-d .4s infinite ease-in-out;
 }
@@ -190,7 +232,7 @@
     background-image: url('/images/profiles/zamora.png');
 }
 
-.profile.zamora:hover .head,
+.profile:not(.mobile).zamora:hover .head,
 .profile.zamora.selected .head {
     animation: bobble-r-d .4s infinite ease-in-out;
 }
@@ -207,7 +249,7 @@
     background-image: url('/images/profiles/perez.png');
 }
 
-.profile.perez:hover .head,
+.profile:not(.mobile).perez:hover .head,
 .profile.perez.selected .head {
     animation: bobble-r-d .4s infinite ease-in-out;
 }
@@ -224,7 +266,7 @@
     background-image: url('/images/profiles/guerrero.png');
 }
 
-.profile.guerrero:hover .head,
+.profile:not(.mobile).guerrero:hover .head,
 .profile.guerrero.selected .head {
     animation: bobble-l-d .4s infinite ease-in-out;
 }
@@ -241,7 +283,7 @@
     background-image: url('/images/profiles/santana.png');
 }
 
-.profile.santana:hover .head,
+.profile:not(.mobile).santana:hover .head,
 .profile.santana.selected .head {
     animation: bobble-r-d .4s infinite ease-in-out;
 }
@@ -258,7 +300,7 @@
     background-image: url('/images/profiles/fonsi.png');
 }
 
-.profile.fonsi:hover .head,
+.profile:not(.mobile).fonsi:hover .head,
 .profile.fonsi.selected .head {
     animation: bobble-l-d .4s infinite ease-in-out;
 }
@@ -275,7 +317,7 @@
     background-image: url('/images/profiles/garces.png');
 }
 
-.profile.garces:hover .head,
+.profile:not(.mobile).garces:hover .head,
 .profile.garces.selected .head {
     animation: bobble-l-d .4s infinite ease-in-out;
 }
@@ -292,7 +334,7 @@
     background-image: url('/images/profiles/baez.png');
 }
 
-.profile.baez:hover .head,
+.profile:not(.mobile).baez:hover .head,
 .profile.baez.selected .head {
     animation: bobble-r-d .4s infinite ease-in-out;
 }
@@ -309,7 +351,7 @@
     background-image: url('/images/profiles/poveda.png');
 }
 
-.profile.poveda:hover .head,
+.profile:not(.mobile).poveda:hover .head,
 .profile.poveda.selected .head {
     animation: bobble-r-d .4s infinite ease-in-out;
 }
@@ -326,7 +368,7 @@
     background-image: url('/images/profiles/luque.png');
 }
 
-.profile.luque:hover .head,
+.profile:not(.mobile).luque:hover .head,
 .profile.luque.selected .head {
     animation: bobble-l-d .4s infinite ease-in-out;
 }
