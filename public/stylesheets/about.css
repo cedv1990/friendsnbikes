@@ -314,6 +314,23 @@
     animation: bobble-r-d .4s infinite ease-in-out;
 }
 
+.profile.luque .head {
+    top: 12px;
+    left: 40px;
+    height: 70px;
+    width: 70px;
+    background-image: url('/images/profiles/head-luque.png');
+}
+
+.profile.luque .picture {
+    background-image: url('/images/profiles/luque.png');
+}
+
+.profile.luque:hover .head,
+.profile.luque.selected .head {
+    animation: bobble-l-d .4s infinite ease-in-out;
+}
+
 @media (max-width: 890px) {
     .construccion {
         font-size: 1.5em;
