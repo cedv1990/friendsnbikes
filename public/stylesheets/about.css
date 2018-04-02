@@ -199,6 +199,10 @@
         opacity: 1;
     }
 
+/****************** PERFILES ******************/
+
+/*#region Perfiles*/
+
 .profile.diaz .head {
     top: 10px;
     right: 46px;
@@ -209,11 +213,6 @@
 
 .profile.diaz .picture {
     background-image: url('/images/profiles/diaz.png');
-}
-
-.profile:not(.mobile).diaz:hover .head,
-.profile.diaz.selected .head {
-    animation: bobble-l-d .4s infinite ease-in-out;
 }
 
 .profile.orjuela .head {
@@ -228,11 +227,6 @@
     background-image: url('/images/profiles/orjuela.png');
 }
 
-.profile:not(.mobile).orjuela:hover .head,
-.profile.orjuela.selected .head {
-    animation: bobble-r-d .4s infinite ease-in-out;
-}
-
 .profile.zamora .head {
     top: 1px;
     left: 60px;
@@ -243,11 +237,6 @@
 
 .profile.zamora .picture {
     background-image: url('/images/profiles/zamora.png');
-}
-
-.profile:not(.mobile).zamora:hover .head,
-.profile.zamora.selected .head {
-    animation: bobble-r-d .4s infinite ease-in-out;
 }
 
 .profile.perez .head {
@@ -262,11 +251,6 @@
     background-image: url('/images/profiles/perez.png');
 }
 
-.profile:not(.mobile).perez:hover .head,
-.profile.perez.selected .head {
-    animation: bobble-r-d .4s infinite ease-in-out;
-}
-
 .profile.guerrero .head {
     top: 4px;
     right: 66px;
@@ -277,11 +261,6 @@
 
 .profile.guerrero .picture {
     background-image: url('/images/profiles/guerrero.png');
-}
-
-.profile:not(.mobile).guerrero:hover .head,
-.profile.guerrero.selected .head {
-    animation: bobble-l-d .4s infinite ease-in-out;
 }
 
 .profile.santana .head {
@@ -296,11 +275,6 @@
     background-image: url('/images/profiles/santana.png');
 }
 
-.profile:not(.mobile).santana:hover .head,
-.profile.santana.selected .head {
-    animation: bobble-r-d .4s infinite ease-in-out;
-}
-
 .profile.fonsi .head {
     top: 4px;
     right: 48px;
@@ -311,11 +285,6 @@
 
 .profile.fonsi .picture {
     background-image: url('/images/profiles/fonsi.png');
-}
-
-.profile:not(.mobile).fonsi:hover .head,
-.profile.fonsi.selected .head {
-    animation: bobble-l-d .4s infinite ease-in-out;
 }
 
 .profile.garces .head {
@@ -330,11 +299,6 @@
     background-image: url('/images/profiles/garces.png');
 }
 
-.profile:not(.mobile).garces:hover .head,
-.profile.garces.selected .head {
-    animation: bobble-l-d .4s infinite ease-in-out;
-}
-
 .profile.baez .head {
     top: 12px;
     left: 61px;
@@ -345,11 +309,6 @@
 
 .profile.baez .picture {
     background-image: url('/images/profiles/baez.png');
-}
-
-.profile:not(.mobile).baez:hover .head,
-.profile.baez.selected .head {
-    animation: bobble-r-d .4s infinite ease-in-out;
 }
 
 .profile.poveda .head {
@@ -364,11 +323,6 @@
     background-image: url('/images/profiles/poveda.png');
 }
 
-.profile:not(.mobile).poveda:hover .head,
-.profile.poveda.selected .head {
-    animation: bobble-r-d .4s infinite ease-in-out;
-}
-
 .profile.luque .head {
     top: 12px;
     left: 40px;
@@ -379,11 +333,6 @@
 
 .profile.luque .picture {
     background-image: url('/images/profiles/luque.png');
-}
-
-.profile:not(.mobile).luque:hover .head,
-.profile.luque.selected .head {
-    animation: bobble-l-d .4s infinite ease-in-out;
 }
 
 .profile.pulido .head {
@@ -398,11 +347,6 @@
     background-image: url('/images/profiles/pulido.png');
 }
 
-.profile:not(.mobile).pulido:hover .head,
-.profile.pulido.selected .head {
-    animation: bobble-l-d .4s infinite ease-in-out;
-}
-
 .profile.quiroga .head {
     top: 0;
     right: 53px;
@@ -415,10 +359,45 @@
     background-image: url('/images/profiles/quiroga.png');
 }
 
+/*#endregion Perfiles*/
+
+/****************** ANIMATIONS ******************/
+
+/*#region Animaciones*/
+
+.profile:not(.mobile).diaz:hover .head,
+.profile.diaz.selected .head,
+.profile:not(.mobile).guerrero:hover .head,
+.profile.guerrero.selected .head,
+.profile:not(.mobile).fonsi:hover .head,
+.profile.fonsi.selected .head,
+.profile:not(.mobile).garces:hover .head,
+.profile.garces.selected .head,
+.profile:not(.mobile).luque:hover .head,
+.profile.luque.selected .head,
+.profile:not(.mobile).pulido:hover .head,
+.profile.pulido.selected .head {
+    animation: bobble-l-d .4s infinite ease-in-out;
+}
+
 .profile:not(.mobile).quiroga:hover .head,
-.profile.quiroga.selected .head {
+.profile.quiroga.selected .head,
+.profile:not(.mobile).santana:hover .head,
+.profile.santana.selected .head,
+.profile:not(.mobile).baez:hover .head,
+.profile.baez.selected .head,
+.profile:not(.mobile).poveda:hover .head,
+.profile.poveda.selected .head,
+.profile:not(.mobile).orjuela:hover .head,
+.profile.orjuela.selected .head,
+.profile:not(.mobile).zamora:hover .head,
+.profile.zamora.selected .head,
+.profile:not(.mobile).perez:hover .head,
+.profile.perez.selected .head {
     animation: bobble-r-d .4s infinite ease-in-out;
 }
+
+/*#endregion Animaciones*/
 
 @media (max-width: 890px) {
     .construccion {
