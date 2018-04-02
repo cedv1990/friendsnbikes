@@ -161,6 +161,19 @@
     font-size: 1.1em;
 }
 
+.profile .name p {
+    margin: 1px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.profile .name p:not(:first-of-type):not(:last-of-type) {
+    font-size: .7em;
+}
+
+.profile .name p:last-of-type {
+    font-size: .8em;
+}
+
 .profile .instagram {
     font-size: .9em;
     display: flex;
@@ -370,6 +383,23 @@
 
 .profile:not(.mobile).luque:hover .head,
 .profile.luque.selected .head {
+    animation: bobble-l-d .4s infinite ease-in-out;
+}
+
+.profile.pulido .head {
+    top: 54px;
+    right: 0;
+    height: 135px;
+    width: 96px;
+    background-image: url('/images/profiles/head-pulido.png');
+}
+
+.profile.pulido .picture {
+    background-image: url('/images/profiles/pulido.png');
+}
+
+.profile:not(.mobile).pulido:hover .head,
+.profile.pulido.selected .head {
     animation: bobble-l-d .4s infinite ease-in-out;
 }
 

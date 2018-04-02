@@ -92,7 +92,7 @@ section.container {
         }
 
         .album:not(.mobile):hover .imgs > div img {
-            opacity: .7;
+            opacity: .7;
         }
 
         .album:not(.mobile):hover .imgs::after {

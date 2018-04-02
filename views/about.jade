@@ -12,5 +12,8 @@ block content
       div(class='profile ' + profile.name)
         div.head
         div.picture
-        section.name= profile.description
+        section.name
+          p= profile.description
+          p= "(" + profile.alias + ")"
+          p= profile.model
           section.instagram(url=profile.instagram)= profile.instagram

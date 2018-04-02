@@ -2,67 +2,97 @@
     {
         "name": "baez",
         "order": 9,
-        "description": "Leonardo Báez (Leo) - MT03",
+        "description": "Leonardo Báez",
+        "alias": "Leo",
+        "model": "MT03",
         "instagram": "@leonardobg.19"
     },
     {
         "name": "diaz",
         "order": 1,
-        "description": "Carlos Díaz (Carlitos) - GSXR600",
+        "description": "Carlos Díaz",
+        "alias": "Carlitos",
+        "model": "GSXR600",
         "instagram": "@carlosgsxr600"
     },
     {
         "name": "fonsi",
         "order": 7,
-        "description": "Álvaro Ruíz (Fonsi) - Z250",
+        "description": "Álvaro Ruíz",
+        "alias": "Fonsi",
+        "model": "Z250",
         "instagram": "@fonsi1193"
     },
     {
         "name": "garces",
         "order": 8,
-        "description": "Cristhian Garcés (Garci) - MT09",
+        "description": "Cristhian Garcés",
+        "alias": "Garci",
+        "model": "MT09",
         "instagram": "@cristhiangarces"
     },
     {
         "name": "guerrero",
         "order": 5,
-        "description": "Carlos Guerrero (Árabe) - Ninja 300",
+        "description": "Carlos Guerrero",
+        "alias": "Árabe",
+        "model": "Ninja 300",
         "instagram": "@carlos.guerrero823"
     },
     {
         "name": "luque",
         "order": 11,
-        "description": "Cristhian Luque (Cris) - --",
+        "description": "Cristhian Luque",
+        "alias": "Cris",
+        "model": "--",
         "instagram": "@crissluquer"
     },
     {
         "name": "orjuela",
         "order": 2,
-        "description": "Felipe Orjuela (Pipe) - R15",
+        "description": "Felipe Orjuela",
+        "alias": "Pipe",
+        "model": "R15",
         "instagram": "@felipenk9"
     },
     {
         "name": "perez",
         "order": 4,
-        "description": "Julián Pérez (Juli) - ZX6R",
+        "description": "Julián Pérez",
+        "alias": "Juli",
+        "model": "ZX6R",
         "instagram": "@jjulianprin"
     },
     {
         "name": "poveda",
         "order": 10,
-        "description": "Sneider Poveda (Tiësto) - GSXS750",
+        "description": "Sneider Poveda",
+        "alias": "Tiësto",
+        "model": "GSXS750",
         "instagram": "@sneider_poveda"
     },
     {
         "name": "santana",
         "order": 6,
-        "description": "Fabián Santana (Fabi) - Z250",
+        "description": "Fabián Santana",
+        "alias": "Fabi",
+        "model": "Z250",
         "instagram": "@fabian__santana"
     },
     {
         "name": "zamora",
         "order": 3,
-        "description": "Felipe Zamora (Zamorita) - R6/R15",
+        "description": "Felipe Zamora",
+        "alias": "Zamorita",
+        "model": "R6/R15",
         "instagram": "@felipezamorac"
+    },
+    {
+        "name": "pulido",
+        "order": 12,
+        "description": "Sebastián Pulido",
+        "alias": "Sebas - Motorismo",
+        "model": "R15/G650GS",
+        "instagram": "@motorismo"
     }
 ]
