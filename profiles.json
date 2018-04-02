@@ -102,5 +102,13 @@
         "alias": "Lore",
         "model": "R15",
         "instagram": "@lou_quiroga"
+    },
+    {
+        "name": "gonzalez",
+        "order": 14,
+        "description": "Samuel González",
+        "alias": "Samu",
+        "model": "Z250",
+        "instagram": "@samu9602"
     }
 ]

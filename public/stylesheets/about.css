@@ -268,6 +268,18 @@
     background-image: url('/images/profiles/quiroga.png');
 }
 
+.profile.gonzalez .head {
+    top: 0;
+    right: 65px;
+    height: 75px;
+    width: 63px;
+    background-image: url('/images/profiles/head-gonzalez.png');
+}
+
+.profile.gonzalez .picture {
+    background-image: url('/images/profiles/gonzalez.png');
+}
+
 /*#endregion Perfiles*/
 
 /****************** ANIMATIONS ******************/
@@ -285,7 +297,9 @@
 .profile:not(.mobile).luque:hover .head,
 .profile.luque.selected .head,
 .profile:not(.mobile).pulido:hover .head,
-.profile.pulido.selected .head {
+.profile.pulido.selected .head,
+.profile:not(.mobile).gonzalez:hover .head,
+.profile.gonzalez.selected .head {
     animation: bobble-l-d .4s infinite ease-in-out;
 }
 
