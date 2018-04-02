@@ -405,9 +405,9 @@
 
 .profile.ovalle .head {
     top: 0;
-    left: 78px;
+    left: 89px;
     height: 55px;
-    width: 67px;
+    width: 45px;
     background-image: url('/images/profiles/head-ovalle.png');
 }
 
@@ -418,6 +418,10 @@
 .profile:not(.mobile).ovalle:hover .head,
 .profile.ovalle.selected .head {
     animation: bobble-l-d .4s infinite ease-in-out;
+}
+
+body {
+    background-image: none !important;
 }
 
 @media (max-width: 890px) {
