@@ -403,27 +403,6 @@
     animation: bobble-l-d .4s infinite ease-in-out;
 }
 
-.profile.ovalle .head {
-    top: 0;
-    left: 89px;
-    height: 55px;
-    width: 45px;
-    background-image: url('/images/profiles/head-ovalle.png');
-}
-
-.profile.ovalle .picture {
-    background-image: url('/images/profiles/ovalle.png');
-}
-
-.profile:not(.mobile).ovalle:hover .head,
-.profile.ovalle.selected .head {
-    animation: bobble-l-d .4s infinite ease-in-out;
-}
-
-body {
-    background-image: none !important;
-}
-
 @media (max-width: 890px) {
     .construccion {
         font-size: 1.5em;
