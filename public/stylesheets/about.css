@@ -1,92 +1,4 @@
-@-webkit-keyframes bobble-l-d {
-    25% {
-        transform: translateX(-2px) translateY(2px) rotate(-3deg);
-    }
-    50% {
-        transform: rotate(0);
-    }
-    75% {
-        transform: translateX(2px) translateY(-2px) rotate(5deg);
-    }
-}
-@-moz-keyframes bobble-l-d {
-    25% {
-        transform: translateX(-2px) translateY(2px) rotate(-3deg);
-    }
-    50% {
-        transform: rotate(0);
-    }
-    75% {
-        transform: translateX(2px) translateY(-2px) rotate(5deg);
-    }
-}
-@-o-keyframes bobble-l-d {
-    25% {
-        transform: translateX(-2px) translateY(2px) rotate(-3deg);
-    }
-    50% {
-        transform: rotate(0);
-    }
-    75% {
-        transform: translateX(2px) translateY(-2px) rotate(5deg);
-    }
-}
-@keyframes bobble-l-d {
-    25% {
-        transform: translateX(-2px) translateY(2px) rotate(-3deg);
-    }
-    50% {
-        transform: rotate(0);
-    }
-    75% {
-        transform: translateX(2px) translateY(-2px) rotate(5deg);
-    }
-}
-
-@-webkit-keyframes bobble-r-d {
-    25% {
-        transform: translateX(-2px) translateY(2px) rotate(5deg);
-    }
-    50% {
-        transform: rotate(0);
-    }
-    75% {
-        transform: translateX(2px) translateY(-2px) rotate(-3deg);
-    }
-}
-@-moz-keyframes bobble-r-d {
-    25% {
-        transform: translateX(-2px) translateY(2px) rotate(5deg);
-    }
-    50% {
-        transform: rotate(0);
-    }
-    75% {
-        transform: translateX(2px) translateY(-2px) rotate(-3deg);
-    }
-}
-@-o-keyframes bobble-r-d {
-    25% {
-        transform: translateX(-2px) translateY(2px) rotate(5deg);
-    }
-    50% {
-        transform: rotate(0);
-    }
-    75% {
-        transform: translateX(2px) translateY(-2px) rotate(-3deg);
-    }
-}
-@keyframes bobble-r-d {
-    25% {
-        transform: translateX(-2px) translateY(2px) rotate(5deg);
-    }
-    50% {
-        transform: rotate(0);
-    }
-    75% {
-        transform: translateX(2px) translateY(-2px) rotate(-3deg);
-    }
-}
+@import url("keyframes.css");
 
 .profiles {
     display: flex;
@@ -149,16 +61,13 @@
     text-align: center;
     max-width: 95%;
     margin-top: 15px;
+    font-size: 1.1em;
 }
 
 .profile .name,
 .profile .instagram {
     letter-spacing: 1px;
     opacity: 0;
-}
-
-.profile .name {
-    font-size: 1.1em;
 }
 
 .profile .name p {
