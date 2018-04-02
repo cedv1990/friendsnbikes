@@ -51,6 +51,12 @@ album.define('gallery', () => {
             foot
         ]);
         document.body.appendChild(container);
+
+        container.addEvent.call(window, 'keyup', (e) => {
+            if (e.keyCode == 27) {
+                destroy();
+            }
+        });
     };
 
     const next = () => {
