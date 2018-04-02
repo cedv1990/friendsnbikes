@@ -38,7 +38,16 @@ section.container {
         flex: 1;
         display: flex;
         align-items: center;
+        flex-flow: column;
         max-height: 50px;
+    }
+
+    .album .name > p {
+        
+    }
+
+    .album .name > p:last-of-type {
+        
     }
 
     .album .description {

@@ -23,6 +23,7 @@ router.get('/', function(req, res, next) {
 
         var album = {
           name: configuration.name,
+          date: configuration.date,
           description: configuration.description,
           coverImgs: configuration.cover,
           folder: '/images/albums/' + file,

@@ -54,7 +54,26 @@ album.define('gallery', () => {
 
         container.addEvent.call(window, 'keyup', (e) => {
             if (e.keyCode == 27) {
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
                 destroy();
+            }
+            else if (e.keyCode == 39) {
+                if (index + 1 < data[indexAlbum].imgs.length) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    right.click();
+                }
+            }
+            else if (e.keyCode == 37) {
+                if (index > 0) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    left.click();
+                }
             }
         });
     };
@@ -77,7 +96,7 @@ album.define('gallery', () => {
     const _init = i => {
         index = 0;
         indexAlbum = i;
-        createLayout(data[indexAlbum].name);
+        createLayout(data[indexAlbum].name + ' - ' + data[indexAlbum].date);
         next();
     }
 

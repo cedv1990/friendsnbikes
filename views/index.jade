@@ -15,6 +15,8 @@ block content
         each cover in album.coverImgs
           div
             img(src=album.folder + '/' + cover)
-      div.name= album.name
+      div.name
+        p= album.name
+        p= album.date
       div.description= album.description
   - }
