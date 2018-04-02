@@ -403,6 +403,23 @@
     animation: bobble-l-d .4s infinite ease-in-out;
 }
 
+.profile.quiroga .head {
+    top: 0;
+    right: 53px;
+    height: 75px;
+    width: 70px;
+    background-image: url('/images/profiles/head-quiroga.png');
+}
+
+.profile.quiroga .picture {
+    background-image: url('/images/profiles/quiroga.png');
+}
+
+.profile:not(.mobile).quiroga:hover .head,
+.profile.quiroga.selected .head {
+    animation: bobble-r-d .4s infinite ease-in-out;
+}
+
 @media (max-width: 890px) {
     .construccion {
         font-size: 1.5em;

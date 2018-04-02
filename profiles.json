@@ -94,5 +94,13 @@
         "alias": "Sebas - Motorismo",
         "model": "R15/G650GS",
         "instagram": "@motorismo"
+    },
+    {
+        "name": "quiroga",
+        "order": 13,
+        "description": "Lorena Quiroga",
+        "alias": "Lore",
+        "model": "R15",
+        "instagram": "@lou_quiroga"
     }
 ]
