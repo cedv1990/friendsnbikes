@@ -2,5 +2,13 @@
     "name": "Día de práctica autódromo",
     "date": "27 de Marzo de 2018",
     "description": "Un día completo de prácticas libres en el autódromo de tocancipá, dándole a nuestras motos donde debe ser.",
-    "cover": ["min-1.jpg", "min-2.jpg", "min-3.jpg", "min-4.jpg"]
+    "cover": ["min-1.jpg", "min-2.jpg", "min-3.jpg", "min-4.jpg"],
+    "videos": [
+        "https://drive.google.com/file/d/1WOgbAQCE67Y8zMMW_MBbdGgFpVboJ4ZXhA/preview",
+        "https://drive.google.com/file/d/1THAuPF_wbv7w2ZAxf2JGa9RAShAAqNLa6g/preview",
+        "https://drive.google.com/file/d/1K2C4tOTJKRmXC9oT7E40U3UyFGhq6bKQMg/preview",
+        "https://drive.google.com/file/d/1G-GSyscXcvltiQkWUx37i-IjDRCy0zCHtQ/preview",
+        "https://drive.google.com/file/d/1RSHQlBKyxNfx7Hu8W8srkNhsEiWDR74Dog/preview",
+        "https://drive.google.com/file/d/15f8vW19M2l35KFktzZ_2TO98tgMbVPV5aw/preview"
+    ]
 }

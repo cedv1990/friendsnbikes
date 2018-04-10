@@ -27,7 +27,8 @@ router.get('/', function(req, res, next) {
           description: configuration.description,
           coverImgs: configuration.cover,
           folder: '/images/albums/' + file,
-          imgs: leer(d + '/' + file, [])
+          imgs: leer(d + '/' + file, []),
+          videos: configuration.videos || []
         };
         albums.push(album);
       }

@@ -72,6 +72,11 @@
             max-width: 100%;
         }
 
+        .gallery-container .gallery-photo > iframe {
+            height: 100%;
+            width: 100%;
+        }
+
     .gallery-container > aside {
         top: 90px;
         bottom: 0;
@@ -169,5 +174,9 @@
 
     .gallery-container .gallery-desc {
         bottom: 10px;
+    }
+
+    .gallery-container .gallery-photo > iframe {
+        height: 90%;
     }
 }

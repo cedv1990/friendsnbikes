@@ -4,19 +4,48 @@ album.define('gallery', () => {
     let data;
     let index;
 
-    const description = () => 'Foto {0} de {1}'.format(index + 1, data[indexAlbum].imgs.length);
+    const description = () => 'Elemento {0} de {1}'.format(index + 1, data[indexAlbum].imgs.length + data[indexAlbum].videos.length);
 
     const _setData = d => data = d;
     let photoView;
     let container;
     let foot;
 
-    const destroy = () => {
-        container.delete();
-    }
-
     const createLayout = title => {
+        const keyupEvent = (e) => {
+            if (e.keyCode == 27) {
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                destroy();
+            }
+            else if (e.keyCode == 39) {
+                if (index + 1 < data[indexAlbum].imgs.length + data[indexAlbum].videos.length) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    rightEvent();
+                }
+            }
+            else if (e.keyCode == 37) {
+                if (index > 0) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    leftEvent();
+                }
+            }
+        };
+
+        const destroy = () => {
+            container.delete();
+            container.removeEvent.call(window, 'keyup', keyupEvent);
+        }
+
         container = s5.createElem('aside', { 'class': 'gallery-container' });
+
+        container.addEvent.call(window, 'keyup', keyupEvent);
+
         const left = s5.createElem('aside', { 'class': 'gallery-prev hidden' }).insert(s5.iconos.Triangulo(20, '#FFFFFF'));
         const right = s5.createElem('aside', { 'class': 'gallery-next' }).insert(s5.iconos.Triangulo(20, '#FFFFFF'));
         const titleCont = s5.createElem('div', { 'class': 'gallery-title' }).insert([
@@ -25,21 +54,25 @@ album.define('gallery', () => {
         ]);
         foot = s5.createElem('div', { 'class': 'gallery-desc' });
 
-        right.addEvent('click', () => { 
+        const rightEvent = () => {
             index++;
             next();
             left.classList.remove('hidden');
-            if (index + 1 == data[indexAlbum].imgs.length)
+            if (index + 1 == data[indexAlbum].imgs.length + data[indexAlbum].videos.length)
                 right.classList.add('hidden');
-        });
+        };
 
-        left.addEvent('click', () => { 
+        const leftEvent = () => {
             index--;
             next();
             right.classList.remove('hidden');
             if (index == 0)
                 left.classList.add('hidden');
-        });
+        };
+
+        right.addEvent('click', rightEvent);
+
+        left.addEvent('click', leftEvent);
 
         photoView = s5.createElem('section', { 'class': 'gallery-photo' });
 
@@ -51,31 +84,6 @@ album.define('gallery', () => {
             foot
         ]);
         document.body.appendChild(container);
-
-        container.addEvent.call(window, 'keyup', (e) => {
-            if (e.keyCode == 27) {
-                e.preventDefault();
-                e.stopPropagation();
-                e.stopImmediatePropagation();
-                destroy();
-            }
-            else if (e.keyCode == 39) {
-                if (index + 1 < data[indexAlbum].imgs.length) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    e.stopImmediatePropagation();
-                    right.click();
-                }
-            }
-            else if (e.keyCode == 37) {
-                if (index > 0) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    e.stopImmediatePropagation();
-                    left.click();
-                }
-            }
-        });
     };
 
     const next = () => {
@@ -83,13 +91,24 @@ album.define('gallery', () => {
         photoView.innerHTML = '';
         foot.innerHTML = '';
 
-        const url = '{0}/{1}'.format(album.folder, album.imgs[index]);
+        if (index < album.imgs.length) {
 
-        photoView.insert(s5.createElem('img', { 'src': url }));
-        if (s5.get('__style')) s5.get('__style').delete();
-        const style = s5.createElem('style', { 'id': '__style' });
-        style.innerHTML = '.gallery-container .gallery-photo::before { background-image: url("{0}") }'.format(url);
-        document.head.appendChild(style);
+            const url = '{0}/{1}'.format(album.folder, album.imgs[index]);
+
+            photoView.insert(s5.createElem('img', { 'src': url }));
+            if (s5.get('__style')) s5.get('__style').delete();
+            const style = s5.createElem('style', { 'id': '__style' });
+            style.innerHTML = '.gallery-container .gallery-photo::before { background-image: url("{0}") }'.format(url);
+            document.head.appendChild(style);
+
+        }
+        else{
+
+            photoView.insert(s5.createElem('iframe', { 'src': album.videos[index - album.imgs.length] }));
+            if (s5.get('__style')) s5.get('__style').delete();
+
+        }
+
         foot.insert(document.createTextNode(description()));
     };
 
