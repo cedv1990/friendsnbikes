@@ -170,6 +170,8 @@
         padding: 10px;
         left: 30px;
         right: 30px;
+        top: 70px;
+        bottom: 10px;
     }
 
     .gallery-container .gallery-desc {
