@@ -160,23 +160,23 @@
     background-image: url('/images/profiles/perez.png');
 }
 
-.profile.guerrero .head {
-    top: 4px;
-    right: 66px;
-    height: 70px;
-    width: 70px;
-    background-image: url('/images/profiles/head-guerrero.png');
+.profile.robin .head {
+    top: 10px;
+    right: 78px;
+    height: 125px;
+    width: 125px;
+    background-image: url('/images/profiles/head-robin.png');
 }
 
-.profile.guerrero .picture {
-    background-image: url('/images/profiles/guerrero.png');
+.profile.robin .picture {
+    background-image: url('/images/profiles/robin.png');
 }
 
 .profile.santana .head {
-    top: 3px;
-    right: 35px;
-    height: 75px;
-    width: 75px;
+    top: 4px;
+    left: 77px;
+    height: 61px;
+    width: 66px;
     background-image: url('/images/profiles/head-santana.png');
 }
 
@@ -220,16 +220,16 @@
     background-image: url('/images/profiles/baez.png');
 }
 
-.profile.poveda .head {
-    top: 1px;
-    left: 69px;
-    height: 60px;
-    width: 60px;
-    background-image: url('/images/profiles/head-poveda.png');
+.profile.isis .head {
+    top: 24px;
+    left: 64px;
+    height: 50px;
+    width: 50px;
+    background-image: url('/images/profiles/head-isis.png');
 }
 
-.profile.poveda .picture {
-    background-image: url('/images/profiles/poveda.png');
+.profile.isis .picture {
+    background-image: url('/images/profiles/isis.png');
 }
 
 .profile.luque .head {
@@ -280,6 +280,18 @@
     background-image: url('/images/profiles/gonzalez.png');
 }
 
+.profile.vero .head {
+    top: 28px;
+    right: 68px;
+    height: 55px;
+    width: 55px;
+    background-image: url('/images/profiles/head-vero.png');
+}
+
+.profile.vero .picture {
+    background-image: url('/images/profiles/vero.png');
+}
+
 /*#endregion Perfiles*/
 
 /****************** ANIMATIONS ******************/
@@ -288,18 +300,22 @@
 
 .profile:not(.mobile).diaz:hover .head,
 .profile.diaz.selected .head,
-.profile:not(.mobile).guerrero:hover .head,
-.profile.guerrero.selected .head,
+.profile:not(.mobile).robin:hover .head,
+.profile.robin.selected .head,
 .profile:not(.mobile).fonsi:hover .head,
 .profile.fonsi.selected .head,
 .profile:not(.mobile).garces:hover .head,
 .profile.garces.selected .head,
 .profile:not(.mobile).luque:hover .head,
 .profile.luque.selected .head,
-.profile:not(.mobile).pulido:hover .head,
-.profile.pulido.selected .head,
+.profile:not(.mobile).isis:hover .head,
+.profile.isis.selected .head,
 .profile:not(.mobile).gonzalez:hover .head,
-.profile.gonzalez.selected .head {
+.profile.gonzalez.selected .head,
+.profile:not(.mobile).vero:hover .head,
+.profile.vero.selected .head,
+.profile:not(.mobile).robin:hover .head,
+.profile.robin.selected .head {
     animation: bobble-l-d .4s infinite ease-in-out;
 }
 
@@ -309,8 +325,8 @@
 .profile.santana.selected .head,
 .profile:not(.mobile).baez:hover .head,
 .profile.baez.selected .head,
-.profile:not(.mobile).poveda:hover .head,
-.profile.poveda.selected .head,
+.profile:not(.mobile).pulido:hover .head,
+.profile.pulido.selected .head,
 .profile:not(.mobile).orjuela:hover .head,
 .profile.orjuela.selected .head,
 .profile:not(.mobile).zamora:hover .head,

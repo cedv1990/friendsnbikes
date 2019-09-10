@@ -32,19 +32,19 @@
         "instagram": "@cristhiangarces"
     },
     {
-        "name": "guerrero",
+        "name": "robin",
         "order": 5,
-        "description": "Carlos Guerrero",
-        "alias": "Árabe",
-        "model": "Ninja 300",
-        "instagram": "@carlos.guerrero823"
+        "description": "Robinsson Tijaro",
+        "alias": "Robin",
+        "model": "Fazer 150",
+        "instagram": "@damiantijaro"
     },
     {
         "name": "luque",
         "order": 11,
         "description": "Cristhian Luque",
         "alias": "Cris",
-        "model": "--",
+        "model": "Jet 5r",
         "instagram": "@crissluquer"
     },
     {
@@ -52,7 +52,7 @@
         "order": 2,
         "description": "Felipe Orjuela",
         "alias": "Pipe",
-        "model": "R15",
+        "model": "Bici",
         "instagram": "@felipenk9"
     },
     {
@@ -60,23 +60,23 @@
         "order": 4,
         "description": "Julián Pérez",
         "alias": "Juli",
-        "model": "ZX6R",
+        "model": "Duke 690",
         "instagram": "@jjulianprin"
     },
     {
-        "name": "poveda",
+        "name": "isis",
         "order": 10,
-        "description": "Sneider Poveda",
-        "alias": "Tiësto",
-        "model": "GSXS750",
-        "instagram": "@sneider_poveda"
+        "description": "Isis Caicedo",
+        "alias": "Isis",
+        "model": "Avenger 220",
+        "instagram": "@is_mochirebel"
     },
     {
         "name": "santana",
         "order": 6,
         "description": "Fabián Santana",
         "alias": "Fabi",
-        "model": "Z250",
+        "model": "GSR-750",
         "instagram": "@fabian__santana"
     },
     {
@@ -84,7 +84,7 @@
         "order": 3,
         "description": "Felipe Zamora",
         "alias": "Zamorita",
-        "model": "R6/R15",
+        "model": "R6",
         "instagram": "@felipezamorac"
     },
     {
@@ -92,7 +92,7 @@
         "order": 12,
         "description": "Sebastián Pulido",
         "alias": "Sebas - Motorismo",
-        "model": "R15/G650GS",
+        "model": "--",
         "instagram": "@motorismo"
     },
     {
@@ -100,7 +100,7 @@
         "order": 13,
         "description": "Lorena Quiroga",
         "alias": "Lore",
-        "model": "R15",
+        "model": "--",
         "instagram": "@lou_quiroga"
     },
     {
@@ -108,7 +108,15 @@
         "order": 14,
         "description": "Samuel González",
         "alias": "Samu",
-        "model": "Z250",
+        "model": "--",
         "instagram": "@samu9602"
+    },
+    {
+        "name": "vero",
+        "order": 15,
+        "description": "Verónica Giraldo",
+        "alias": "Verito",
+        "model": "RTX 150",
+        "instagram": "@verosmiau"
     }
 ]
